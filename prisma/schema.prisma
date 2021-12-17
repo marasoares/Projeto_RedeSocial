@@ -13,14 +13,14 @@ datasource db {
 model Seguidores {
   id            Int             @default(autoincrement()) @id
   idSeguidor    Int
-  usuario       Usuario[]         @relation (fields: [usuarioid] , references: [id] )
+  usuario       Usuario         @relation (fields: [usuarioid] , references: [id] )
   usuarioid     Int
 }
 
 model Seguindo {
   id            Int             @default(autoincrement()) @id
   idSeguindo    Int
-  usuario       Usuario[]         @relation (fields: [usuarioid] , references: [id] )
+  usuario       Usuario         @relation (fields: [usuarioid] , references: [id] )
   usuarioid     Int
 }
 
@@ -28,9 +28,9 @@ model Tweet{
   id            Int             @default(autoincrement()) @id
   texto         String
   emoji         String
-  data_postagem DateTime        @default(now())
-  curtidas      Int[]
-  usuario       Usuario[]       @relation (fields: [usuarioid] , references: [id] )
+  data_postagem DateTime        @default(now())   @map(name: "data_postagem")
+  curtidas      Int
+  usuario       Usuario         @relation (fields: [usuarioid] , references: [id] )
   usuarioid     Int
 }
 
@@ -41,11 +41,8 @@ model Usuario {
   bio           String
   nascimento    String
   seguidores    Seguidores[]
-  idSeguidor    Int[] 
   seguindo      Seguindo[]
-  idSeguindo    Int[]
-  criado_em     DateTime        @default(now())
-  modificado_em DateTime        @default(now())
+  criado_em     DateTime        @default(now())   @map(name: "criado_em")
+  modificado_em DateTime        @default(now())   @map(name: "modificado_em")
   tweet         Tweet[] 
-  tweetid       Int[]
 }
