@@ -36,13 +36,19 @@ model Tweet{
 
 model Usuario {
   id            Int             @default(autoincrement()) @id
-  nome          String
+  nome          String          
+  email         String          
   imagem        String
   bio           String
   nascimento    String
   seguidores    Seguidores[]
   seguindo      Seguindo[]
-  criado_em     DateTime        @default(now())   @map(name: "criado_em")
-  modificado_em DateTime        @default(now())   @map(name: "modificado_em")
+  criado_em     String        
+  modificado_em String        
   tweet         Tweet[] 
+}
+
+model Usuarios {
+  nome_usuario  String          @unique
+  senha         String
 }

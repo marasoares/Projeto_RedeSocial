@@ -8,6 +8,10 @@ export class CreateUsuarioDto {
 
     @IsNotEmpty()
     @IsString()
+    email: string;
+
+    @IsNotEmpty()
+    @IsString()
     imagem: string;
 
     @IsNotEmpty()
