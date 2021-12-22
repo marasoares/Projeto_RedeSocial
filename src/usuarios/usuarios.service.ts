@@ -18,17 +18,17 @@ export class UsuariosService {
   async findByLogin(login: CreateUsuarioDto): Promise<Usuarios> {
     const user = await this.prisma.usuarios.findFirst({
       where: {
-        nome_usuario: login.nome_usuario,
+        nomeUsuario: login.nomeUsuario,
       }
     })
 
-    if(!user) {
+    if (!user) {
       throw new HttpException('Usuário não encontrado', HttpStatus.NOT_FOUND);
     }
 
-    const senhaigual = await bcrypt.compare(login.senha, user.senha);
+    const senhaIgual = await bcrypt.compare(login.senha, user.senha);
 
-    if(!senhaigual) {
+    if (!senhaIgual) {
       throw new HttpException('Senha inválida', HttpStatus.UNAUTHORIZED);
     }
 

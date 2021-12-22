@@ -49,6 +49,6 @@ model Usuario {
 }
 
 model Usuarios {
-  nome_usuario  String          @unique
+  nomeUsuario   String          @unique
   senha         String
 }

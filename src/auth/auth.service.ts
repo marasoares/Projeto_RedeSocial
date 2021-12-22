@@ -18,13 +18,13 @@ export class AuthService {
         const token = this._createToken(user);
 
         return{
-            nome_usuario: user.nome_usuario,
+            nomeUsuario: user.nomeUsuario,
             ...token
         }
     }
  
-    private _createToken({ nome }: LoginDto): any {
-        const user: JwtPayload = { nome };
+    private _createToken({ nomeUsuario }: LoginDto): any {
+        const user: JwtPayload = { nomeUsuario };
         const accessToken = this.jwtService.sign(user);
         return {
             expiresIn: process.env.EXPIRESIN,
