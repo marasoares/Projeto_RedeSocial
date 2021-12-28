@@ -1,7 +1,7 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
-import { CreateUsuarioDto } from './dto/create-usuarios.dto';
-import { UpdateUsuarioDto } from './dto/update-usuario.dto';
+import { CreateUsuariosDto } from './dto/create-usuarios.dto';
+import { UpdateUsuariosDto } from './dto/update-usuarios.dto';
 import * as bcrypt from 'bcrypt';
 import { Usuarios } from '@prisma/client';
 
@@ -10,12 +10,12 @@ export class UsuariosService {
   // eslint-disable-next-line prettier/prettier
   constructor(private prisma: PrismaService) {}
   
-  async create(data: CreateUsuarioDto): Promise<Usuarios> {
+  async create(data: CreateUsuariosDto): Promise<Usuarios> {
     data.senha = await bcrypt.hash(data.senha, 10);
     return await this.prisma.usuarios.create({ data });
   }
 
-  async findByLogin(login: CreateUsuarioDto): Promise<Usuarios> {
+  async findByLogin(login: CreateUsuariosDto): Promise<Usuarios> {
     const user = await this.prisma.usuarios.findFirst({
       where: {
         nomeUsuario: login.nomeUsuario,
@@ -43,7 +43,7 @@ export class UsuariosService {
     return `This action returns a #${id} usuario`;
   }
 
-  update(id: number, updateUsuarioDto: UpdateUsuarioDto) {
+  update(id: number, updateUsuariosDto: UpdateUsuariosDto) {
     return `This action updates a #${id} usuario`;
   }
 
