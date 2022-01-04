@@ -89,7 +89,9 @@ Para uma melhor documentação do Projeto, utilizamos o Swagger para a visualiza
 
 Por exemplo, na rota Usuario, utilizamos o Swagger da seguinte forma, no navegador digitamos: localhost:3000/api, que irá nos apresentar a página abaixo:
 
-![image-20220102003212345](C:\Users\victo\AppData\Roaming\Typora\typora-user-images\image-20220102003212345.png)
+![image](https://user-images.githubusercontent.com/89050695/148139331-489eb335-97ac-4a2f-a8f5-554a7224c3e6.png)
+
+! [image-20220102003212345] (C: \ Users \ victo \ AppData \ Roaming \ Typora \ typora-user-images \ image-20220102003212345.png)
 
 Dessa forma também é demonstrado todos os endpoints das Rotas e subrotas necessárias para o Projeto.
 
