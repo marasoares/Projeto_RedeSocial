@@ -91,15 +91,13 @@ Por exemplo, na rota Usuario, utilizamos o Swagger da seguinte forma, no navegad
 
 ![image](https://user-images.githubusercontent.com/89050695/148139331-489eb335-97ac-4a2f-a8f5-554a7224c3e6.png)
 
-! [image-20220102003212345] (C: \ Users \ victo \ AppData \ Roaming \ Typora \ typora-user-images \ image-20220102003212345.png)
 
 Dessa forma também é demonstrado todos os endpoints das Rotas e subrotas necessárias para o Projeto.
 
 É possível testar cada endpoint no Swagger, verificar se o mesmo está fazendo a inserção dos dados no banco de dados, no nosso caso, no Postgres, conforme abaixo:
 
-![image-20220102001646335](C:\Users\victo\AppData\Roaming\Typora\typora-user-images\image-20220102001646335.png)
-
-Por estarmos inserindo um dado novo na tabela o parâmetro utilizado é que as informações venham do `body` utilizando a `application/json`.
+![image](https://user-images.githubusercontent.com/89050695/148139951-fc99c6ce-a44d-4cdf-9d70-8c872425dfbf.png)
+mage-20220102001646335](C:\Users\victo\AppData\Roaming\Typora\typora-user-images\image-20220102001646335.png)mações venham do `body` utilizando a `application/json`. 
 
 Em seguida temos a opção de executar ou limpar as informações do body e a resposta, conforme abaixo:
 
