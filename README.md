@@ -96,18 +96,19 @@ Dessa forma também é demonstrado todos os endpoints das Rotas e subrotas neces
 
 É possível testar cada endpoint no Swagger, verificar se o mesmo está fazendo a inserção dos dados no banco de dados, no nosso caso, no Postgres, conforme abaixo:
 
-![image](https://user-images.githubusercontent.com/89050695/148139951-fc99c6ce-a44d-4cdf-9d70-8c872425dfbf.png)
-mage-20220102001646335](C:\Users\victo\AppData\Roaming\Typora\typora-user-images\image-20220102001646335.png)mações venham do `body` utilizando a `application/json`. 
+As infomações venham do `body` utilizando a `application/json`. 
 
-Em seguida temos a opção de executar ou limpar as informações do body e a resposta, conforme abaixo:
+![image](https://user-images.githubusercontent.com/89050695/148140920-8b584fa7-ec7d-428e-9939-2b025407ec7c.png)
 
-![image-20220102002201024](C:\Users\victo\AppData\Roaming\Typora\typora-user-images\image-20220102002201024.png)
 
-Pode ser observado que, caso as informações inseridas não estejam totalmente iguais a model da rota ao clicar em execute temos um HttpCode 400, conforme abaixo::
+Em seguida temos a opção de executar ou limpar as informações do body e a resposta, conforme abaixo:image-20220102002201024](C:\Users\victo\AppData\Roaming\Typora\typora-user-images\image-20220102002201024.png)Pode ser observado que, caso as informações inseridas não estejam totalmente iguais a model da rota ao clicar em execute temos um HttpCode 400, conforme abaixo:
+
+![image](https://user-images.githubusercontent.com/89050695/148141488-e850cf3e-96f7-4ec1-a994-00a92bdcd24a.png)
+
 
 ![image-20220102002648330](C:\Users\victo\AppData\Roaming\Typora\typora-user-images\image-20220102002648330.png)
-
 Como estamos utilizando o JWT nesse Projeto, o usuário criado no Swagger não tem um token válido, logo precisamos primeiro criar o login para esse usuário. Dessa forma criamos a pasta Usuarios, que ficou responsável por toda criação e validação desse login, apresentando essa informação no ThunderClient:
+
 
 ```javascript
 model Usuarios {
