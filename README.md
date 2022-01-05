@@ -89,25 +89,29 @@ Para uma melhor documentação do Projeto, utilizamos o Swagger para a visualiza
 
 Por exemplo, na rota Usuario, utilizamos o Swagger da seguinte forma, no navegador digitamos: localhost:3000/api, que irá nos apresentar a página abaixo:
 
-![image-20220102003212345](C:\Users\victo\AppData\Roaming\Typora\typora-user-images\image-20220102003212345.png)
+![image](https://user-images.githubusercontent.com/89050695/148139331-489eb335-97ac-4a2f-a8f5-554a7224c3e6.png)
+
 
 Dessa forma também é demonstrado todos os endpoints das Rotas e subrotas necessárias para o Projeto.
 
 É possível testar cada endpoint no Swagger, verificar se o mesmo está fazendo a inserção dos dados no banco de dados, no nosso caso, no Postgres, conforme abaixo:
 
-![image-20220102001646335](C:\Users\victo\AppData\Roaming\Typora\typora-user-images\image-20220102001646335.png)
+As infomações venham do `body` utilizando a `application/json`. 
 
-Por estarmos inserindo um dado novo na tabela o parâmetro utilizado é que as informações venham do `body` utilizando a `application/json`.
+![image](https://user-images.githubusercontent.com/89050695/148140920-8b584fa7-ec7d-428e-9939-2b025407ec7c.png)
+
 
 Em seguida temos a opção de executar ou limpar as informações do body e a resposta, conforme abaixo:
 
-![image-20220102002201024](C:\Users\victo\AppData\Roaming\Typora\typora-user-images\image-20220102002201024.png)
+![image](https://user-images.githubusercontent.com/89050695/148141875-d7265598-d452-4466-9a6f-fe5cd5d9a3a8.png)
 
-Pode ser observado que, caso as informações inseridas não estejam totalmente iguais a model da rota ao clicar em execute temos um HttpCode 400, conforme abaixo::
+É possível, ainda,  verificar que no exemplo acima tivemos um Bad Request:
 
-![image-20220102002648330](C:\Users\victo\AppData\Roaming\Typora\typora-user-images\image-20220102002648330.png)
+![image](https://user-images.githubusercontent.com/89050695/148141488-e850cf3e-96f7-4ec1-a994-00a92bdcd24a.png)
+
 
 Como estamos utilizando o JWT nesse Projeto, o usuário criado no Swagger não tem um token válido, logo precisamos primeiro criar o login para esse usuário. Dessa forma criamos a pasta Usuarios, que ficou responsável por toda criação e validação desse login, apresentando essa informação no ThunderClient:
+
 
 ```javascript
 model Usuarios {
