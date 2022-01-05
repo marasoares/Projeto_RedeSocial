@@ -101,12 +101,15 @@ As infomações venham do `body` utilizando a `application/json`.
 ![image](https://user-images.githubusercontent.com/89050695/148140920-8b584fa7-ec7d-428e-9939-2b025407ec7c.png)
 
 
-Em seguida temos a opção de executar ou limpar as informações do body e a resposta, conforme abaixo:image-20220102002201024](C:\Users\victo\AppData\Roaming\Typora\typora-user-images\image-20220102002201024.png)Pode ser observado que, caso as informações inseridas não estejam totalmente iguais a model da rota ao clicar em execute temos um HttpCode 400, conforme abaixo:
+Em seguida temos a opção de executar ou limpar as informações do body e a resposta, conforme abaixo:
+
+![image](https://user-images.githubusercontent.com/89050695/148141875-d7265598-d452-4466-9a6f-fe5cd5d9a3a8.png)
+
+É possível, ainda,  verificar que no exemplo acima tivemos um Bad Request:
 
 ![image](https://user-images.githubusercontent.com/89050695/148141488-e850cf3e-96f7-4ec1-a994-00a92bdcd24a.png)
 
 
-![image-20220102002648330](C:\Users\victo\AppData\Roaming\Typora\typora-user-images\image-20220102002648330.png)
 Como estamos utilizando o JWT nesse Projeto, o usuário criado no Swagger não tem um token válido, logo precisamos primeiro criar o login para esse usuário. Dessa forma criamos a pasta Usuarios, que ficou responsável por toda criação e validação desse login, apresentando essa informação no ThunderClient:
 
 
