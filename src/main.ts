@@ -12,8 +12,8 @@ async function bootstrap() {
   
   const config = new DocumentBuilder()
     .setTitle('Rede Social')
-    .setDescription('Projeto 2 - Postgres + NestJS + TypeScript + Prisma + JWT')
-    .setVersion('1.0')
+    .setDescription('Projeto Final - Postgres + NestJS + TypeScript + Prisma + JWT')
+    .setVersion('2.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
